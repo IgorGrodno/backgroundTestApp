@@ -1,5 +1,6 @@
 export interface ITestSelect{
   label:string,
-  isТecessary: boolean,
-  values:string[]
+  isNecessary: boolean,
+  values:string[],
+  id:string
    }

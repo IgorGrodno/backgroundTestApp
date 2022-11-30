@@ -1,3 +1,4 @@
 export interface ITestCheckBox{
- label:string
+ label:string,
+ id:string
   }

@@ -1,6 +1,7 @@
 export interface ITestNumber{
   label:string,
-  isТecessary: boolean,
-  isZeroPosible:boolean,
-  isNegativePosible:boolean
+  isNecessary: boolean,
+ minValue:number,
+  id:string,
+  description:string
    }

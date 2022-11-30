@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ITestCheckBox } from 'src/app/models/test-checkbox/test-checkbox.module';
 
 @Component({
@@ -8,10 +8,31 @@ import { ITestCheckBox } from 'src/app/models/test-checkbox/test-checkbox.module
 })
 export class TestCheckboxComponent {
 
+  value:boolean=false;
+
   @Input()
   checkBoxObject:ITestCheckBox={
     label:"",
     id:""
-     }
+     }   
+     
+     @Output()
+  change: EventEmitter< {
+    elementType:string,
+    id:string,
+    value:boolean
+  }> = new EventEmitter< {
+    elementType:string,
+    id:string,
+    value:boolean
+  }>();
+
+changeValue(){ 
+  this.change.emit( {
+    elementType:'checkBox',
+    id:this.checkBoxObject.id,
+    value:this.value
+  });
+}
      
 }

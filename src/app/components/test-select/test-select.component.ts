@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ITestSelect } from './../../models/test-select/test-select.module';
 
 @Component({
@@ -16,5 +16,25 @@ export class TestSelectComponent {
   id:''
   }
 
+  value:string='Не важно';
+
+  @Output()
+  change: EventEmitter< {
+    elementType:string,
+    id:string,
+    value:string
+  }> = new EventEmitter< {
+    elementType:string,
+    id:string,
+    value:string
+  }>();
+
+changeValue(){  
+  this.change.emit( {
+    elementType:'select',
+    id:this.selectObject.id,
+    value:this.value
+  });
+}
   }
 

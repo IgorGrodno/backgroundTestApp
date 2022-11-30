@@ -3,16 +3,22 @@
 </div>
 <form>
     <div>
-        <app-test-input *ngFor="let input of dataObject.inputs" [inputObject]=input></app-test-input>
+        <app-test-input *ngFor="let input of dataObject.inputs" [inputObject]=input (change)="changeValue($event)">
+        </app-test-input>
     </div>
     <div>
-        <app-test-select *ngFor="let select of dataObject.selects" [selectObject]=select></app-test-select>
+        <app-test-select *ngFor="let select of dataObject.selects" [selectObject]=select (change)="changeValue($event)">
+        </app-test-select>
     </div>
     <div>
-        <app-test-number *ngFor="let number of dataObject.numbers" [numberObject]=number></app-test-number>
+        <app-test-number *ngFor="let number of dataObject.numbers" [numberObject]=number (change)="changeValue($event)">
+        </app-test-number>
     </div>
     <div>
         <span>{{dataObject.checkBoxesLabel}}</span>
-        <app-test-checkbox *ngFor="let checkBox of dataObject.checkBoxes" [checkBoxObject]=checkBox></app-test-checkbox>
+        <app-test-checkbox *ngFor="let checkBox of dataObject.checkBoxes" [checkBoxObject]=checkBox
+            (change)="changeValue($event)">
+        </app-test-checkbox>
     </div>
+    <button disabled id="submitButton" (click)="createDataString()">Отправить</button>
 </form>

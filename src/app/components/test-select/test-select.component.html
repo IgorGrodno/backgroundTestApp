@@ -6,8 +6,9 @@
         *
     </div>
     <div>
-        <select>
-            <option *ngFor="let value of selectObject.values" [value]="value">{{value}}</option>
+        <select id={{selectObject.id}} [(ngModel)]="value" (change)="changeValue()">
+            <option *ngIf=!selectObject.isNecessary>Не важно</option>
+            <option *ngFor="let value of selectObject.values">{{value}}</option>
         </select>
     </div>
 </div>

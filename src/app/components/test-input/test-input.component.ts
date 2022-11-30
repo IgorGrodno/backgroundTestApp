@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ITestInput } from 'src/app/models/test-input/test-input.module';
 
 @Component({
@@ -7,7 +7,7 @@ import { ITestInput } from 'src/app/models/test-input/test-input.module';
   styleUrls: ['./test-input.component.scss']
 })
 export class TestInputComponent {
- 
+   
   @Input()
   inputObject:ITestInput={
   label:'',
@@ -17,4 +17,26 @@ export class TestInputComponent {
   description:"",
   id:""
 }
+
+value:string="";
+
+@Output()
+  change: EventEmitter< {
+    elementType:string,
+    id:string,
+    value:string
+  }> = new EventEmitter< {
+    elementType:string,
+    id:string,
+    value:string
+  }>();
+
+changeValue(){  
+  this.change.emit( {
+    elementType:'input',
+    id:this.inputObject.id,
+    value:this.value
+  });
+}
+
 }

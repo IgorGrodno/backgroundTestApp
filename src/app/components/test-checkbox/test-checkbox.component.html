@@ -1,3 +1,4 @@
 <div>
-    <input type="checkbox" id={{checkBoxObject.id}}><span>{{checkBoxObject.label}}</span>
+    <input type="checkbox" id={{checkBoxObject.id}} [(ngModel)]="value"
+        (change)="changeValue()"><span>{{checkBoxObject.label}}</span>
 </div>

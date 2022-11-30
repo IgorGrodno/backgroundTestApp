@@ -1,9 +1,8 @@
 <div>
     <div>{{numberObject.label}}</div>
-    <div *ngIf="numberObject.isNecessary" style="color: red;">*</div>
     <div>
-        <input id={{numberObject.id}} type="number" required={{numberObject.isNecessary}} min={{numberObject.minValue}}
-            value={{numberObject.minValue}} (focusout)="valueCheck($event)">
+        <input id={{numberObject.id}} type="number" min={{numberObject.minValue}} (change)="changeValue()"
+            [(ngModel)]="value">
         <span>{{numberObject.description}}</span>
     </div>
 </div>

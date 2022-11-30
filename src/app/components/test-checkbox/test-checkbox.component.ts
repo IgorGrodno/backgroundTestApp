@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ITestCheckBox } from 'src/app/models/test-checkbox/test-checkbox.module';
 
 @Component({
   selector: 'app-test-checkbox',
@@ -6,7 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./test-checkbox.component.scss']
 })
 export class TestCheckboxComponent {
+
   @Input()
-  label:string='';
-  id:string=''
+  checkBoxObject:ITestCheckBox={
+    label:"",
+    id:""
+     }
+     
 }

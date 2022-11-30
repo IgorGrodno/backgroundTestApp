@@ -1,0 +1,103 @@
+{
+"formLabel":"Анкета",
+"inputs":[
+    {
+    "label":"input",
+    "isNecessary": false,
+    "isMultiple":false,
+    "placeholder":"fist input",
+    "description":"description for input",
+    "id":"input0"
+},
+{
+    "label":"input 1",
+    "isNecessary": true,
+    "isMultiple":false,
+    "placeholder":"second input",
+    "description":"description for input",
+    "id":"input1"
+},
+{
+    "label":"input 2",
+    "isNecessary": true,
+    "isMultiple":false,
+    "placeholder":"next input",
+    "description":"description for input",
+    "id":"input2"
+}
+],
+"checkBoxesLabel":"Чекбоксы",
+"checkBoxes":[
+    {
+        "label":"checkBox",
+        "id":"checkBox0"
+    },
+    {
+        "label":"checkBox 1",
+        "id":"checkBox1"
+    },
+    {
+        "label":"checkBox 2",
+        "id":"checkBox2"
+    }
+
+],  
+"numbers":[
+    {
+        "label":"number",
+        "isNecessary": false,
+        "minValue":-2,
+        "id":"number0",
+        "description":"description for number"
+    },
+    {
+        "label":"number 1",
+        "isNecessary": true,
+        "minValue":0,
+        "id":"number1",
+        "description":"description for number"
+    },
+    {
+        "label":"number 2",
+        "isNecessary": true,
+        "minValue":5,
+        "id":"number2",
+        "description":"description for number"
+    }
+],
+"selects":[
+    {
+    "label":"select",
+    "isNecessary": false,
+    "values":[
+        "value 0",
+        "value 1",
+        "value 2",
+        "value 3"
+    ],
+    "id":"select0"
+    },
+    {
+    "label":"select 1",
+    "isNecessary": true,
+    "values":[
+        "value 00",
+        "value 11",
+        "value 22",
+        "value 33"
+    ],
+    "id":"select1"
+    },
+    {
+    "label":"select 2",
+    "isNecessary": true,
+    "values":[
+        "value 000",
+        "value 111",
+        "value 222",
+        "value 333"
+    ],
+    "id":"select2"
+    }
+]
+}

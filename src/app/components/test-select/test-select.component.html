@@ -1,1 +1,13 @@
-<p>test-select works!</p>
+<div>
+    <div>
+        {{selectObject.label}}
+    </div>
+    <div *ngIf="selectObject.isNecessary" style="color: red;">
+        *
+    </div>
+    <div>
+        <select>
+            <option *ngFor="let value of selectObject.values" [value]="value">{{value}}</option>
+        </select>
+    </div>
+</div>

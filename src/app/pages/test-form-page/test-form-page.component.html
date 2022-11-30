@@ -1,0 +1,18 @@
+<div>
+    <h1>{{dataObject.formLabel}}</h1>
+</div>
+<form>
+    <div>
+        <app-test-input *ngFor="let input of dataObject.inputs" [inputObject]=input></app-test-input>
+    </div>
+    <div>
+        <app-test-select *ngFor="let select of dataObject.selects" [selectObject]=select></app-test-select>
+    </div>
+    <div>
+        <app-test-number *ngFor="let number of dataObject.numbers" [numberObject]=number></app-test-number>
+    </div>
+    <div>
+        <span>{{dataObject.checkBoxesLabel}}</span>
+        <app-test-checkbox *ngFor="let checkBox of dataObject.checkBoxes" [checkBoxObject]=checkBox></app-test-checkbox>
+    </div>
+</form>

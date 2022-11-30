@@ -1,9 +1,8 @@
-<div
-    style="display: flex;flex-direction: row;flex-wrap: wrap;width: 100%;align-items: flex-start;justify-content: flex-start;">
-    <span>{{label}}</span><span ngIf={{isNecessary}} style="text-decoration: red;">*</span>
-    <div
-        style="display: flex;flex-direction: column;flex-wrap: nowrap;width: 100%;align-items: flex-start;justify-content: flex-start;">
-        <input id={{id}} type="text" placeholder={{placeholder}} required={{isNecessary}}>
-        <span ngIf={{description!==undefined}}}>{{description}}</span>
+<div>
+    <span>{{inputObject.label}}</span><span *ngIf="inputObject.isNecessary" style="color: red;">*</span>
+    <div>
+        <input id={{inputObject.id}} type="text" placeholder={{inputObject.placeholder}}
+            required={{inputObject.isNecessary}}>
+        <span>{{inputObject.description}}</span>
     </div>
 </div>

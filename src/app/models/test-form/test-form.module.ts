@@ -4,9 +4,10 @@ import { ITestSelect } from "../test-select/test-select.module";
 import { ITestCheckBox} from './../test-checkbox/test-checkbox.module';
 
 export interface ITestForm{
+  formLabel:string,
   inputs:ITestInput[],
-  checkBoxsLabel:string,
-  checkBoxes:ITestCheckBox,  
+  checkBoxesLabel:string,
+  checkBoxes:ITestCheckBox[],  
   numbers:ITestNumber[],
   selects:ITestSelect[]
    }

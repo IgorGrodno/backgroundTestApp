@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ITestSelect } from './../../models/test-select/test-select.module';
 
 @Component({
   selector: 'app-test-select',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class TestSelectComponent {
 
-}
+  @Input()
+  selectObject:ITestSelect={
+  label:'',
+  isNecessary:false,
+  values:[],
+  id:''
+  }
+
+  }
+

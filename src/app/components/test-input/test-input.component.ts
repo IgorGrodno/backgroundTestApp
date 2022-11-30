@@ -9,10 +9,12 @@ import { ITestInput } from 'src/app/models/test-input/test-input.module';
 export class TestInputComponent {
  
   @Input()
-  label:string ='';
-  isNecessary: boolean =false;
-  isMultiple:boolean =false;
-  placeholder:string ='';
-  description:string | undefined;
-  id:string="";
+  inputObject:ITestInput={
+  label:'',
+  isNecessary:false,
+  isMultiple:false,
+  placeholder:'',
+  description:"",
+  id:""
+}
 }
